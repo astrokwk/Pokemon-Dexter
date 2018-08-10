@@ -1,0 +1,227 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+  background-color: #fceee3;
+}
+
+.pokeDex {
+	border-radius: 20px;
+	background-color: #FE0065;
+  width: 400px;
+  height: 610px;
+	margin: 0 auto;
+	margin-top: 40px;
+	box-shadow: 5px 10px 18px rgba(136, 136, 136, .8);
+	background-color: #870000;
+}
+
+.screen {
+	display: inline-block;
+	border-radius: 5px;
+	background-color: #FFF;
+	width: 360px;
+	height: 530px;
+	margin: 45px 20px 0px 20px;
+	font-family: 'Arimo', sans-serif;
+}
+
+/*-----------------------------------------------------*/
+
+nav {
+	text-align: center;
+background: #005C97;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	padding: 20px 0px 40px 0px;
+	overflow: hidden;
+	height: 40px;
+}
+
+h1 {
+	color: #FFF;
+	margin: 0;
+	text-transform: capitalize;
+}
+
+.searchBox {
+	margin-top: 5px;
+}
+
+.inputBox {
+	display: inline-block;
+	margin-left: 85px;
+}
+
+input {
+	display: none;
+	border-radius: 10px;
+	right: 0px;
+	padding-left: 10px;
+	font-size: 14px;
+	width: 150px;
+}
+
+.iconBox {
+	display: inline-block;
+	float: right;
+	margin-right: 65px;
+}
+
+
+.iconBox i {
+	display: inline-block;
+	color: white;
+	font-size: 22px;
+}
+
+.iconBox i:hover {
+	color: yellow;
+}
+
+
+/*-----------------------------------------------------------*/
+
+#pokemon {
+	margin-top: 15px;
+	display: flex;
+/*	justify-content: flex-end;*/
+}
+
+#po {
+	margin-right: auto;
+}
+
+img {
+	height: 96px;
+	width: 96px;
+	/*float: left;*/
+	/*margin: 0px 0px 0px 10px;*/
+/*	 margin-left: 10px;*/
+	display: inline-block;
+/*	margin-left: auto;*/
+}
+
+#po img {
+	margin: 0px 0px 0px 10px;
+}
+
+#mo {
+	display: inline-block;
+	width: 225px;
+	margin: 0px 10px;
+	color: #212121;
+}
+
+#description {
+
+	color: rgba(66,67,68, .9);
+	font-weight: 600;
+/*	width: 225px;*/
+	margin-right: auto;
+	line-height: 120%;
+	margin-top: 10px;
+}
+
+
+hr {
+	display: block;
+	margin: 0;
+	border: 1px solid #efeded;
+}
+
+#abili {
+	display: inline;
+	text-transform: capitalize;
+	color: #212121;
+}
+
+.abb {
+	margin-bottom: 10px;
+	margin-left: 25px;
+}
+
+/*------------------------------------------------------------*/
+
+
+.info-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.info-box {
+/*	background-color: red;
+	border: 1px solid green;*/
+	text-align: left;
+	padding: 10px;
+	height: 20px;
+}
+
+.info-box p {
+	margin: 0;
+	display: inline;
+	color: #212121;
+	text-transform: capitalize;
+}
+
+
+
+#info {
+	height: 100px;
+	width: 200px;
+}
+
+.bio {
+	font-weight: 600;
+	color: #fff;
+	margin-left: 15px;
+}
+
+/*----------------------------------------------------------------*/
+
+#evolution {
+	padding: 10px;
+	color: #FFF;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+#eva {
+	margin-top: 5px;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+/*
+.evol1 {
+
+	margin: auto;
+}
+
+.evol2 {
+
+margin: auto;	
+}
+
+.evol3 {
+
+	margin: auto;
+}
+*/
+
+
+/*---------------------------------------------------------------*/
+
+footer {
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+
+
