@@ -30,10 +30,9 @@ body {
 
 nav {
 	text-align: center;
-background: #005C97;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+	background: #005C97;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	padding: 20px 0px 40px 0px;
 	overflow: hidden;
 	height: 40px;
@@ -86,7 +85,6 @@ input {
 #pokemon {
 	margin-top: 15px;
 	display: flex;
-/*	justify-content: flex-end;*/
 }
 
 #po {
@@ -96,11 +94,7 @@ input {
 img {
 	height: 96px;
 	width: 96px;
-	/*float: left;*/
-	/*margin: 0px 0px 0px 10px;*/
-/*	 margin-left: 10px;*/
 	display: inline-block;
-/*	margin-left: auto;*/
 }
 
 #po img {
@@ -115,10 +109,8 @@ img {
 }
 
 #description {
-
 	color: rgba(66,67,68, .9);
 	font-weight: 600;
-/*	width: 225px;*/
 	margin-right: auto;
 	line-height: 120%;
 	margin-top: 10px;
@@ -153,8 +145,6 @@ hr {
 }
 
 .info-box {
-/*	background-color: red;
-	border: 1px solid green;*/
 	text-align: left;
 	padding: 10px;
 	height: 20px;
@@ -166,8 +156,6 @@ hr {
 	color: #212121;
 	text-transform: capitalize;
 }
-
-
 
 #info {
 	height: 100px;
@@ -196,30 +184,11 @@ hr {
 	justify-content: space-around;
 }
 
-
-/*
-.evol1 {
-
-	margin: auto;
-}
-
-.evol2 {
-
-margin: auto;	
-}
-
-.evol3 {
-
-	margin: auto;
-}
-*/
-
-
 /*---------------------------------------------------------------*/
 
 footer {
 	text-align: center;
-	margin-top: 50px;
+	padding: 40px;
 }
 
 

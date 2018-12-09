@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function() {
 
 var url = "https://pokeapi.co/api/v2/pokemon/";
@@ -13,55 +9,6 @@ var input = inputVal.toLowerCase();
 
 var pokeURL = url + input;
 
-/*
-button.addEventListener('click', function(){
-	console.log('chicken');
-	
-	fetch(pokeURL)
-	.then(function(r => r.json()){
-		console.log(r.status);
-		console.log(r.json());
-	})
-	
-	
-	fetch(pokeURL)
-	.then(function(r) {
-	console.log(r.status);
-	return r.json();
-	})
-	.then(function(j){
-	console.log(j);
-	
-	
-	.then(function(res) { 
-		return res.json();
-	})
-.then(function(json){
-		console.log(json);
-	});
-	
-	
-	
-			 
-		
-	
-
-	
-	
-
-	
-
-			var img = document.createElement('img');
-			img.setAttribute('src', j.sprites.front_default );
-			
-			var pokemon = document.getElementById('pokemon');
-
-			pokemon.appendChild(img);
-	
-})
-});
-*/
-
 	
 //--Animation of input box when clicked
 	$('.searchBox').click(function(){
@@ -70,21 +17,7 @@ button.addEventListener('click', function(){
 
 	});
 	
-	
-	
-	
-/*	$(`#input`).keyup(function (e) {
-		var key = e.which;
-		if (e.keyCode === 13) {*/
-			
 
-
-
-
-//--Event happen when search is clicked
-/*button.addEventListener*/
-
-/*$(document).on*/
 button.addEventListener('click', function pokeSubmit(){
 		var paramVal = document.getElementById("input").value;
     var param = paramVal.toLowerCase();
@@ -97,13 +30,8 @@ button.addEventListener('click', function pokeSubmit(){
 	var mo = document.getElementById('mo');
 	
 	
-	/*		var evoo = document.createElement('div');
-		evoo.setAttribute('id', 'eva');*/
 	
-	
-	
-	
-					var weight = document.createElement('div');
+				var weight = document.createElement('div');
 				var height = document.createElement('div');
 				var type = document.createElement('div');
 				var habitat = document.createElement('div');
@@ -118,7 +46,7 @@ button.addEventListener('click', function pokeSubmit(){
 	const t0 = performance.now();
 
 
-/*	$('#pokemon').html('');*/
+
 	
 	    $.getJSON(pokeURL, function(data){
 				
@@ -131,7 +59,7 @@ button.addEventListener('click', function pokeSubmit(){
 				
 				$(`#numName`).html(`#` + data.id + `. `+ data.name);
 			
-			/*console.log(data.abilities);*/
+
 				
 				for (var mey in data.forms) {
 					 var formURL = data.forms[mey].url;
@@ -141,22 +69,12 @@ button.addEventListener('click', function pokeSubmit(){
 					
 									$.getJSON(formURL, function(e){
 
-/*								var img = document.createElement('img');
-										img.setAttribute('src', data.sprites.front_default);*/
+
 										
 										if (data.sprites.front_default == null) {
 											img.setAttribute('src', e.sprites.front_default);
 										}
 										
-/*											img.setAttribute('src', e.sprites.front_default);*/
-/*										if (data.forms.length == 2 && data.sprites.front_default != null) {
-											img.setAttribute('src', data.sprites.front_default);
-										console.log(img); 
-										} else {
-			img.setAttribute('src', e.sprites.front_default);
-										}*/
-			
-/*			var pokemon = document.getElementById('pokemon');*/
 
 			po.appendChild(img);
 					
@@ -177,7 +95,7 @@ button.addEventListener('click', function pokeSubmit(){
         console.log(r);
         console.log(JSON.stringify(r, null, "  "));
 			
-/*			console.log(data.abilities);*/
+
 			
 			
 			var pokemonEntries = document.createElement('p');
@@ -188,7 +106,7 @@ button.addEventListener('click', function pokeSubmit(){
 				//looping through an array inside a Json object
 				for (var key in r.flavor_text_entries) {
 					if (r.flavor_text_entries[key].language.name == "en" && r.flavor_text_entries[key].version.name == "moon") {
-						/*console.log(r.flavor_text_entries[key].flavor_text);*/
+
 						mo.innerHTML = r.flavor_text_entries[key].flavor_text;
 						break;
 					} else if (r.flavor_text_entries[key].language.name == "en" && r.flavor_text_entries[key].version.name == "x") {
@@ -208,10 +126,7 @@ button.addEventListener('click', function pokeSubmit(){
 
 				
 			
-/*				pokemonEntries.innerHTML = r.flavor_text_entries[key].flavor_text;*/
-			
-			
-/*			document.getElementById('pokemon');*/
+
 
 			mo.appendChild(pokemonEntries);
 							
@@ -243,15 +158,11 @@ button.addEventListener('click', function pokeSubmit(){
 											evol1P.setAttribute('class', "evol1");
 											evol1P.setAttribute('src', m.sprites.front_default);
 												evol1.setAttribute('style', 'order: 1;');
-											/*$(`#eva`).empty();*/
-											/*$(`#eva`).append(evol1);*/
+				
 											
 											$(`#eva`).append(evol1);
 											$(evol1).append(evol1P);
-											/*evol1.appendChild(evol1P);*/
-											/*$(evol1).empty().append(evol1P);*/
-									/*		evol1.appendChild(evol1P);*/
-											/*$(evol1).replaceWith(evol1P);*/
+
 										})
 							
 						
@@ -282,10 +193,9 @@ button.addEventListener('click', function pokeSubmit(){
 											
 											evol2.setAttribute('class', 'evol2');
 											evol2.setAttribute('src', n.sprites.front_default);
-											/*	evol1.setAttribute('style', 'order: 1;');*/
+
 												evol2P.setAttribute('style', 'order: 2;');
-/*											evol1P.setAttribute('style', 'margin-left: auto;');
-											evol2.setAttribute('style', 'margin-left: auto;');*/
+
 											$(`#eva`).append(evol2P);
 											$(evol2P).append(evol2);
 											
@@ -293,8 +203,7 @@ button.addEventListener('click', function pokeSubmit(){
 										
 										
 										
-/*										evol1.setAttribute('src', uRLl + d.chain.evolves_to[meat].species.name);
-										*/
+
 										
 										
 											for(var peter in d.chain.evolves_to[meat].evolves_to) {
@@ -312,16 +221,13 @@ button.addEventListener('click', function pokeSubmit(){
 											$.getJSON(uRLl + d.chain.evolves_to[meat].evolves_to[peter].species.name, function(o){
 											console.log(o);
 											
-								/*				evol3P.setAttribute('style', 'margin-left: auto;');*/
-/*										evol1.setAttribute('style', 'display: inline-block;');
-												evol2.setAttribute('style', 'display: inline-block;');*/
+
 										 evol3.setAttribute('class', 'evol3');
-												/*evol3P.setAttribute('style', 'margin-left: auto;');*/
+
 											evol3.setAttribute('src', o.sprites.front_default);
 												
 												
-	/*											evol1.setAttribute('style', 'order: 1;');
-												evol2.setAttribute('style', 'order: 2;');*/
+
 												evol3P.setAttribute('style', 'order: 3;');
 												
 											$(`#eva`).append(evol3P);
@@ -340,36 +246,6 @@ button.addEventListener('click', function pokeSubmit(){
 							});
 							
 							
-
-							//Habitat
-/*			console.log(r.habitat.name);		
-							
-			var info5 = document.createElement('p');
-			
-			info5.innerHTML = r.habitat.name;
-			
-							$('#3').append(info5);*/
-							
-
-   /* });*/
-				
-				
-	/*$('<hr>').insertAfter('#pokemon');*/		
-				
-/*				var ability = document.createElement('div');
-				
-				$(ability).html(`<span class="bio">Abilites: </span> <p id="abili"></p>`);*/
-							
-		/*					var text;
-							for (var i = 0;  text=", "; i < data.abilities.length; i++) {
-	
-								
-								document.getElementById('abili').innerHTML += data.abilities[i].ability.name + ', ';
-										
-									console.log(data.abilities.length-1);							
-							}*/
-							
-							
 							
 							var bebe = [];
 							for (var grum in data.abilities) {
@@ -382,56 +258,12 @@ button.addEventListener('click', function pokeSubmit(){
 							document.getElementById('abili').innerHTML = bebe.join(", ");
 							
 							
-							
-					/*		var abuelo = $('#abili').contents();
-							
- abuelo[abuelo.length - 1].nodeValue = "";*/
-				
-/*									for (var abilities in data.abilities)	{
-													
-						console.log(data.abilities[abilities].ability.name);
-										for (var i = 0; i < 1; i++) {
-											$(`#abili`).html(data.abilities[i].ability.name);
-											document.getElementById('abili').innerHTML += data.abilities[i].ability.name + ', ';
-										
-											console.log(data.abilities[i].ability.name);
-				
-										
-										}
-						$(`#abili`).html(data.abilities[abilities].ability.name);
-					}	*/
+
 			});
 				
 				
 				
-				
-				
-				
-/*				
-					var meme = document.createElement('div');
-				meme.setAttribute('class', 'info-container');
-				$('.screen').append(meme);
-				
-				var weight = document.createElement('div');
-				var height = document.createElement('div');
-				var type = document.createElement('div');
-				var habitat = document.createElement('div');
-	
-			
-				var infoList = [height, type, weight, habitat];
-				
-				for (var i = 0; i < infoList.length; i++) {
-					infoList[i].setAttribute('class', 'info-box');
-					infoList[i].setAttribute('id', i);
-					
-					
-					$(meme).append(infoList[i]);
-				}
-				
-		$(weight).html('<span class="bio">Weight: </span> <p id="weightt"></p>');
-		$(height).html(`<span class="bio">Height: </span> <p id="heightt"></p>`);
-		$(type).html(`<span class="bio">Type: </span> <p id="typee"></p`);
-		$(habitat).html(`<span class="bio">Habitat: </span> <p id="habitatt"></p`);*/
+
 
 				
 //Calculating Height				
@@ -452,34 +284,18 @@ button.addEventListener('click', function pokeSubmit(){
 				
 				
 				
-				
-/*			var info2 = document.createElement('p');
-
-				info2.setAttribute('id', 'info2');*/
-				
 			
 				
 		if (inchesRound === 12){
-			/*info2.innerHTML = feetRound + `'` +  `0"`;*/
+
 			$('#heightt').html(feetRound + `'` +  `0"`);
 		}		else {
 
 
-
-    /*info2.innerHTML = feet + `'` + inchesRound + `"`;	*/
 			$('#heightt').html(feet + `'` + inchesRound + `"`);
 			
 		}
 				
-				
-				
-				/*$('#0').append(info2);*/
-				
-				
-				
-				
-
-		/*		console.log(info);*/
 				
 				
 	//Calculating Weight	
@@ -491,12 +307,10 @@ button.addEventListener('click', function pokeSubmit(){
 	var realpounds = Number(pounds.toFixed(1)).toFixed(1);			
 				
 				
-	/*var info3 = document.createElement('p');	*/
-	
-/*	document.getElementById("weightt").innerHTML = realpounds + `lbs`;*/
+
 	$(`#weightt`).html(realpounds + `lbs`);
 				
-	/*$('#2').append(info3);*/
+
 	
 				
 function weightPkmn() {
@@ -512,18 +326,18 @@ function weightPkmn() {
 				
 		for(var pey in data.types) {
 			if (data.types.length == 2 ) {
-				/*typee.innerHTML = data.types[1].type.name + ` / ` + data.types[0].type.name;*/
+
 				$(`#typee`).html(data.types[1].type.name + ` / ` + data.types[0].type.name);
-/*				console.log(data.types[1].type.name);*/
+
 			} else {
-			/*	typee.innerHTML = data.types[0].type.name;*/
+
 				$(`#typee`).html(data.types[0].type.name);
 			}
 			
 			if(data.types[pey].slot == 1) {
 				
 			
-				/*var typeColor = data.types[pey].type.name;*/
+
 				switch (data.types[pey].type.name) {
 					case "fire":
 						$('nav').css('background', 'linear-gradient(to bottom, #fe8c00, #f83600)');
@@ -626,7 +440,6 @@ function weightPkmn() {
 		}		
 				
 				
-			/*	$('#1').append(info4);*/
 				
 				
 	
@@ -643,155 +456,26 @@ function weightPkmn() {
 			 var habitatt = document.getElementById('habitatt');
 			 
 			
-		/*	info5.innerHTML = resp.habitat.name;*/
+
 			 if(resp.habitat != null) {
-				/* habitatt.innerHTML = resp.habitat.name;*/
+
 				 $(`#habitatt`).html(resp.habitat.name);
 				 console.log(resp.habitat.name);	
 			 } else {
-/*				 habitatt.innerHTML = 'unknown';*/
+
 				  $(`#habitatt`).html('unknown');
 			 }
-			
-		/*					$('#3').append(info5);*/
+
 		 
 		 });
 				
-				
-				
-	//Info categories
-		
-			
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-/*				var formURL = data.forms;
-				
-				console.log(formURL);*/
-				
-/*				$.getJSON(formURL, function(e){
-					
-								var img = document.createElement('img');
-			img.setAttribute('src', e.sprites.front_default );
-			
-			
-			var pokemon = document.getElementById('pokemon');
-
-			pokemon.appendChild(img);
-					
-				})*/
-			
-			
-/*			var img = document.createElement('img');
-			img.setAttribute('src', e.sprites.front_default );
-			
-			
-			var pokemon = document.getElementById('pokemon');
-
-			pokemon.appendChild(img);*/
-				
 
 
     });
 	
 	
 	
-	
-	
-			
-	
-	
-	
-	
-	
-	
-	
-	
 
-/*    $.getJSON(pokeURL, function(data){
-			
-			success = true;
-			
-        console.log(data);
-        console.log(JSON.stringify(data, null, "  "));
-			
-			console.log(data.abilities);
-			
-			
-			var img = document.createElement('img');
-			img.setAttribute('src', data.sprites.front_default );
-			
-			
-			var pokemon = document.getElementById('pokemon');
-
-			pokemon.appendChild(img);
-
-    });*/
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-/*	    $.getJSON(entries, function(r){
-			
-			success = true;
-			
-        console.log(r);
-        console.log(JSON.stringify(r, null, "  "));*/
-			
-/*			console.log(data.abilities);*/
-			
-			
-/*			var pokemonEntries = document.createElement('p');
-			pokemonEntries.setAttribute('id', 'description' );
-				
-				
-				
-				//looping through an array inside a Json object
-				for (var key in r.flavor_text_entries) {
-					if (r.flavor_text_entries[key].language.name == "en" && r.flavor_text_entries[key].version.name == "moon") {
-						/*console.log(r.flavor_text_entries[key].flavor_text);*/
-/*						pokemonEntries.innerHTML = r.flavor_text_entries[key].flavor_text;
-						break;
-					} else if (r.flavor_text_entries[key].language.name == "en" && r.flavor_text_entries[key].version.name == "omega-ruby") {
-						pokemonEntries.innerHTML = r.flavor_text_entries[key].flavor_text;
-					}
-				}*/
-				
-				
-				
-				
-			
-/*				pokemonEntries.innerHTML = r.flavor_text_entries[key].flavor_text;*/
-			
-			
-/*			document.getElementById('pokemon');*/
-
-/*			pokemon.appendChild(pokemonEntries);
-
-    });
-	*/
-	
-	
-	
-	
-	
-	
-	
 	
 	console.log('chicken');
 	
@@ -806,11 +490,6 @@ setTimeout(function() {
 	
 	$(`#input`).val('');
 	
-	
-/*			while(mo.firstChild){
-    mo.removeChild(mo.firstChild);
-}*/
-	
 
 	
 				while(po.firstChild){
@@ -823,20 +502,7 @@ setTimeout(function() {
 	
 	//prevent page refresh
 
-/*	return false;*/
-	
-/*while(pokemon.firstChild){
-    pokemon.removeChild(pokemon.firstChild);
-}*/
-/*	$(`#pokemon`).html("");		*/
-/*
-					if (paramVal != '')
-		{
-			console.log('Cookie');
-		} else {
-				$(`#pokemon`).remove();
-			}
-*/
+
 	
 	const t1 = performance.now();
 	console.log("This code took " + (t1 - t0) + " milliseconds.");
@@ -890,33 +556,24 @@ $('<hr>').insertAfter(ability);
 		$(evolution).html('Evolution');
 		evolution.setAttribute('id', 'evolution');
 		
-		/*$(`.screen`).append(evolution);*/
+
 		$(evolution).insertAfter(`.info-container`);
 		
 		var evoo = document.createElement('div');
 		evoo.setAttribute('id', 'eva');
 		$(evoo).insertAfter(evolution);
 		
-		/*$('#0').append(info2);*/
+
 	}, {once : true});
 	
 
 
 
-//Originally use to go through all the array in the JSON
-/*				Object.keys(data).forEach(key => {
-					console.log(key);
-					console.log(data[key]);
-				});*/
-				
-			
-			
-	/*		e.preventDefault();*/
 			
 			//Enter key when pressed activate the click event
 		$(`#input`).keyup(function (e) {
 			
-	/*	var key = e.which;*/
+
 		if (e.keyCode === 13) {
 			$(`#button`).click();
 			console.log('monkey');
@@ -927,7 +584,5 @@ $('<hr>').insertAfter(ability);
 	
 	
 	} );
-/*
-} );
-})*/
+
 
